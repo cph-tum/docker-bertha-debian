@@ -1,13 +1,14 @@
-FROM debian:oldoldstable
+FROM debian:oldstable
 
 # install build tools
 RUN apt update && apt install --no-install-recommends -y \
   cmake \
-  clang-format-4.0 \
+  clang-format \
   doxygen \
   g++ \
   git \
   lcov \
+  make \
   python3-dev \
   python3-pip \
   python3-setuptools \
