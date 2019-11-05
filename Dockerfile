@@ -1,4 +1,4 @@
-FROM debian:oldstable
+FROM debian:latest
 
 # install build tools
 RUN apt update && apt install --no-install-recommends -y \
