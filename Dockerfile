@@ -17,6 +17,9 @@ RUN apt update && apt install --no-install-recommends -y \
   wget \
   zlib1g-dev
 RUN yes | pip3 install coverxygen gcovr || true
+RUN git clone https://github.com/catchorg/Catch2.git && cd Catch2 && \
+  cmake -Bbuild -H. -DBUILD_TESTING=OFF && \
+  cmake --build build/ --target install
 
 # install required libraries
 RUN apt update && apt install --no-install-recommends -y \
